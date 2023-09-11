@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFF0FC"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="429dp"
+            android:layout_height="260dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/top_background"  />
+
+        <TextView
+            android:id="@+id/hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="70dp"
+            android:text="Hello"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Bharathi M"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/hello"
+            app:layout_constraintTop_toBottomOf="@id/hello" />
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="77dp"
+            android:layout_height="77dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintBottom_toBottomOf="@id/text1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/hello"
+            app:layout_constraintVertical_bias="0.62"
+            app:srcCompat="@drawable/picon" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+
+            android:background="@drawable/white_background"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageView">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/top_banner_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    app:srcCompat="@drawable/notepad" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Take a test"
+                    android:textAlignment="center"
+                    android:textColor="#6672FF"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/top_banner_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/video"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    app:srcCompat="@drawable/videos" />
+
+                <TextView
+                    android:id="@+id/video1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Videos"
+                    android:textAlignment="center"
+                    android:textColor="#6672FF"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/top_banner_background"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
+                    app:srcCompat="@drawable/notes" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Notes"
+                    android:textAlignment="center"
+                    android:textColor="#6672FF"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/search_edittext"
+        android:drawableEnd="@drawable/search_icon"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:hint="Search your Topics here.."
+        android:inputType="textPersonName"
+        android:paddingStart="20dp"
+        android:paddingEnd="4dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="300dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/banner_background"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="103dp"
+            android:layout_height="67dp"
+            android:layout_marginStart="280dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Our Chatbot"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imageView2"
+            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text5"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="123dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="16dp"
+            android:text="Connect with"
+            android:textColor="#ffffff"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.509"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="133dp"
+                android:layout_height="129dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="64dp"
+                    android:layout_height="71dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/brain"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/brain" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/brain1"
+                    android:layout_width="102dp"
+                    android:layout_height="37dp"
+                    android:layout_marginTop="1dp"
+                    android:text="Brain"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="138dp"
+                android:layout_height="132dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/heart"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/heart" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/heart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:text="Heart"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="133dp"
+                android:layout_height="135dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="64dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/lungs"
+                        android:layout_width="53dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/lungs1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/lungs1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lungs"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="122dp"
+                android:layout_height="135dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="64dp"
+                    android:layout_height="71dp"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/eye"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        android:layout_marginBottom="290dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/eyes1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/eye1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Eyes"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="171dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="109dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="57dp"
+                    android:layout_height="58dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/digestion"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/digestion" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/digestion1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Digestion"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="124dp"
+                android:layout_height="137dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="61dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="13dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/kidney"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/kidneys" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/kidney1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="kidney"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="129dp"
+                android:layout_height="138dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="70dp"
+                    android:layout_height="57dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/skull"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/skull1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/skull1"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:text="Skull"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="114dp"
+                android:layout_height="132dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="75dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/white_background">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="16dp"
+                        android:layout_marginBottom="290dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/urinary1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/urinary1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Urinary"
+                    android:textAlignment="center"
+                    android:textColor="#2e3d6d"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
